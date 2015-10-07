@@ -4,7 +4,7 @@
 flashloc="/opt/chromium/PepperFlash";
 bits=64; #Modificar en caso de Arquitectura diferente.
 version="stable" #Tipo de rama. "stable" o "unstable"
-link="https://dl.google.com/linux/direct/google-chrome-${version}_current_$arq.deb"
+
 
 
 color="\e[1m\e[31m"; #Color Rojo  con negrita
@@ -16,7 +16,7 @@ if [ $bits -eq "64" ];then
 else
 	arq="i386"
 fi
-
+link="https://dl.google.com/linux/direct/google-chrome-${version}_current_$arq.deb"
 echo -e "$color # Se procede a descargar $link $end"
 outfile="chrome.deb"
 if [ $nodown = false ];then
